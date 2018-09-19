@@ -15,6 +15,6 @@ public class ArrayDemo {
 
         // print elements at indexes 1, 2, 3, 4, 5
         ArrayOps.printRange(ar1, 1, 5);
-    }
+    } 
 }
 
