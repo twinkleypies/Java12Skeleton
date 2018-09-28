@@ -1,13 +1,13 @@
 arrayequals.java:
-
+Array equals figures out if the arrays are the same or not by if statements
 arrayinitialize.java:
-
+It prints out each value in the array all in one line
 arrayinitialize2.java:
-
+It prints out each value in 3 seperate lines to be able to hold 3 different values
 arraysort.java:
-
+Sorts numbers within the array in accending value
 breakoutwhilenested.java:
-
+*breakhere stops one of the while loops
 bufferedreaderinput.java:
 
 continueexample.java:
