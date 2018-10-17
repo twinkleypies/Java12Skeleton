@@ -1,9 +1,9 @@
 import java.io.*;
-
+import java.util.Scanner;
 class PowerTable {
     public static void main(String[] args) {
         // Get filename and create the file
-        FileWriter writer = null;
+        PrintWriter out = null;
         Scanner scan = new Scanner(System.in);
         String fileName = "";
 

@@ -2,9 +2,9 @@ import java.io.*;
 
 class CreditReader {
     public static void main(String[] args) {
-        String fileName = "reaper.txt";
+        String fileName = "Credit";
         String line;
-
+//prints credit file and if it can't find the file for any reason it prints out 'problem reading ___'
         try {
             BufferedReader in = new BufferedReader(new FileReader(fileName));
             line = in.readLine();

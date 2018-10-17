@@ -9,6 +9,7 @@ public class SquareUser {
 
         while (!goodData) {
             System.out.print("Enter an integer: ");
+            //runs code but catches error if there is any and reruns without crashing
             try {
                 num = scan.nextInt();
                 goodData = true;
@@ -20,7 +21,7 @@ public class SquareUser {
                 String flush = scan.next();
             }
         }
-
+        
         System.out.println("The square of " + num + " is " + num * num);
 
     }
