@@ -1,0 +1,11 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<VBox fx:id="root" xmlns:fx="http://javafx.com/fxml">
+<stylesheets>
+<URL value="@Style.css" />
+</stylesheets>
+<children>
+<Button fx:id="ButtonPrimary" >Click</Button>
+</children>
+</VBox>

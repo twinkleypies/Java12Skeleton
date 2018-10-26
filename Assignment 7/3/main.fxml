@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<VBox>
+    <stylesheets>
+        <URL value="@Main.css" />
+    </stylesheets>
+    <children>
+        <Label>Come Along With mee</Label>
+        <Label>To a Clif under a treee</Label>
+        <Label>We will wander through the forestt</Label>
+        <Label>And do so as we please.</Label>
+    </children>
+</VBox>

@@ -1,0 +1,12 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import java.net.URL?>
+<FlowPane fx:id="root" fx:controller="TwoButtons" xmlns:fx="http://javafx.com/fxml">
+<stylesheets>
+<URL value="@Style.css" />
+</stylesheets>
+<children>
+<Button fx:id="Green" onAction="#GreenButtonAction">Click</Button>
+<Button fx:id="Red" onAction="#RedButtonAction">Click</Button>
+</children>
+</FlowPane>
