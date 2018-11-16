@@ -1,0 +1,22 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.VBox?>
+<FlowPane fx:id="root" fx:controller="TempConversion" xmlns:fx="http://javafx.com/fxml">
+    <stylesheets>
+        <URL value="@Main.css"/>
+    </stylesheets>
+    <children>
+        <VBox>
+        <Label>input</Label>
+        <TextField fx:id="inputField"></TextField>
+        </VBox>
+        <VBox>
+        <!--creates button so it calculates when clicked-->
+        <Button fx:id="FtoCbutton" onAction="#FtoCButtonAction">Convert f to c</Button>
+        <Button fx:id="CtoFbutton" onAction="#CtoFButtonAction">Convert c to f</Button>
+        <Button fx:id="clear" onAction="#clearButtonAction">clear</Button>
+        <TextField fx:id="outputField"></TextField>
+        </VBox>
+    </children>
+</FlowPane>

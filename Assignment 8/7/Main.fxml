@@ -1,0 +1,28 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.VBox?>
+<FlowPane fx:id="root" fx:controller="PercentFat" xmlns:fx="http://javafx.com/fxml">
+    <stylesheets>
+        <URL value="@Main.css"/>
+    </stylesheets>
+    <children>
+    <!--creates labels and a text box for calories and fat for inputs to be put in and to eventually be calculated by the button bellow-->
+        <VBox>
+        <Label>Calories</Label>
+        <TextField fx:id="caloriesField"></TextField>
+        </VBox>
+        <VBox>
+        <Label>Fat (Grams)</Label>
+        <TextField fx:id="fatField"></TextField>
+        </VBox>
+
+
+
+        <VBox>
+        <!--creates button so it calculates when clicked-->
+        <Button fx:id="CalculateButton" onAction="#calculateButtonAction">Calculate</Button>
+        <TextField fx:id="outputField"></TextField>
+        </VBox>
+    </children>
+</FlowPane>
