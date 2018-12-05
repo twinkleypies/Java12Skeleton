@@ -29,10 +29,10 @@ public class WageCalc extends Application {
             // get the values stored in both input fields
             double Hours = Double.valueOf(inputField.getText());
             double HPay = Double.valueOf(inputFieldtwo.getText());
-            // divides the two variables
+            // Does the math
             double multiply = Hours * HPay;
             outputField.setText(String.valueOf(multiply));
-              // makes sure u can't divide by zero
+    
 
         
     }
