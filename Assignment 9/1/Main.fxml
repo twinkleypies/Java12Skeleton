@@ -1,0 +1,35 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.VBox?>
+<FlowPane fx:id="root" fx:controller="ArithmeticCalc" xmlns:fx="http://javafx.com/fxml">
+    <stylesheets>
+        <URL value="@Main.css"/>
+    </stylesheets>
+    <children>
+    <!--creates labels and a text box for calories and fat for inputs to be put in and to eventually be calculated by the button bellow-->
+        <VBox>
+        <Label>Input 1</Label>
+        <TextField fx:id="inputField"></TextField>
+        </VBox>
+        <VBox>
+        <Label>Input 2</Label>
+        <TextField fx:id="inputFieldtwo"></TextField>
+
+        <Label>Output</Label>
+        <TextField fx:id="outputField"></TextField>
+        </VBox>
+        
+
+
+
+        <VBox>
+        <!--creates button so it calculates when clicked-->
+        <Button fx:id="Divide" onAction="#DivideButtonAction">divide</Button>
+        <Button fx:id="Multiply" onAction="#MultiplyButtonAction">multiply</Button>
+        <Button fx:id="sub" onAction="#SubButtonAction">sub</Button>
+        <Button fx:id="sum" onAction="#SumButtonAction">sum</Button>
+     
+        </VBox>
+    </children>
+</FlowPane>

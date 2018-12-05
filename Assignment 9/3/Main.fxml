@@ -1,0 +1,32 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.FlowPane?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.VBox?>
+<FlowPane fx:id="root" fx:controller="WageCalc" xmlns:fx="http://javafx.com/fxml">
+    <stylesheets>
+        <URL value="@Main.css"/>
+    </stylesheets>
+    <children>
+    <!--creates labels and a text box for calories and fat for inputs to be put in and to eventually be calculated by the button bellow-->
+        <VBox>
+        <Label>Hours</Label>
+        <TextField fx:id="inputField"></TextField>
+        </VBox>
+        <VBox>
+        <Label>Hourly Pay</Label>
+        <TextField fx:id="inputFieldtwo"></TextField>
+
+        <Label>Gross</Label>
+        <TextField fx:id="outputField"></TextField>
+        </VBox>
+        
+
+
+
+        <VBox>
+        <!--creates button so it calculates when clicked-->
+        <Button fx:id="DoMaths" onAction="#DoMathsButtonAction">DoMaths</Button>
+     
+        </VBox>
+    </children>
+</FlowPane>
