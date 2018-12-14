@@ -1,8 +1,11 @@
 function displayMessage() {
-    alert("Hello World!"); //#2 What happens if you don’t put the ; (semicolon) in at the end of the line?
+    alert("Hello World!") //#2 What happens if you don’t put the ; (semicolon) in at the end of the line?
 }
 
 //#1 Create another function and button that will display your full name
+function displayName(){
+    alert("Jess Eaton");
+}
 
 //#2 What happens if you don’t put the semicolon at the end of a statement?
 
@@ -14,6 +17,14 @@ function counter() {
 }
 
 //#3 Create another function and button that will do the 3 times table from -100 to 100
+function threeTimesTable(){
+    let out =document.getElementById("threeTimesTableDiv")
+    out.innerHTML = "";
+    for (let i = -100; i<100; i++){
+        let x = i * 3;
+        out.innerHTML += i + "*" + "3 = " + x + "</br>";
+    }
+}
 
 //#4 What does i++ do?
 
@@ -45,6 +56,22 @@ function mathAdder() {
 }
 
 //#6 Add a new function that will show the numbers added, subtracted, multiplied, and divided
+function arithmetic(){
+    let inputOne = document.getElementById("inputOne");
+    let inputTwo = document.getElementById("inputTwo");
+    let inputOneVal = parseFloat(inputOne.value);
+    let inputTwoVal = parseFloat(inputTwo.value);
+    let sum = inputOneVal + inputTwoVal;
+    let difference = inputOneVal - inputTwoVal;
+    let product = inputOneVal * inputTwoVal;
+    let divisor = inputOneVal / inputTwoVal;
+
+    let out = document.getElementById("arithmeticOutputDiv");
+    out.innerHTML = "sum: " + sum + "</br>" +
+        "diffeence: " + difference + "</br>" +
+        "product: " + product + "</br>" +
+        "divisor: " + divisor + "</br>";
+}
 
 //#7 What does != mean?
 
@@ -111,3 +138,59 @@ function rollTheDice() {
 
 
 //#9 Make a game with 4 dice and below 14 or over 14 for the betting
+function rollTheDice14() {
+
+    let money = 100;
+
+    let bet = 1000;
+ 
+
+    alert("Play til you lose it all");
+
+    while (money >= 1) {
+        //no betting more money than you have!
+        //the line below will go forever...the if...break will
+        //get you out of this infinite betting loop if you bet legally
+
+        while (true) {
+            pick = window.prompt("Please pit over 14(over) or under 14(under)", "");
+
+            bet = parseInt(window.prompt("Please bet", money));
+
+
+            if (bet <= money && bet > 0) {
+                break;
+            }
+            
+
+            alert("Illegal Betting detected!");
+        }
+
+        let die1 = Math.floor(Math.random() * 6 + 1);
+
+
+        let die2 = Math.floor(Math.random() * 6 + 1);
+
+        let die3 = Math.floor(Math.random() * 6+1);
+        
+        let die4 = Math.floor(Math.random() * 6+1);
+
+        let total = die1 + die2 + die3 + die4;
+
+        document.write("</br>You rolled " + die1 + " and " + die2 + "and " + die3 + "and" +die4 + " total = " + total);
+        document.write("</br>You picked " + pick + " and rolled " + total);
+
+        if ((pick == "under" && total < 14) || (pick == "over" && total > 14)) {
+            money = money + bet;
+            document.write(" You won! You now have $" + money);
+        } else if (total == 14) {
+            document.write(" 14 is a tie...no winner..keep your bet");
+        } else {
+            money = money - bet;
+          
+
+            document.write(" You Lost! You now have $" + money);
+        }
+    }
+    alert("Thanks for giving me all of your money!");
+}
