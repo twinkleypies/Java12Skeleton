@@ -4,7 +4,7 @@ inventory=[]
 inventory.append(Item("Star wars", "1973", "5.00", "Sci-Fi", "4", "None"))
 inventory.append(Item("Predator","1985","5.00", "Thriller","2","Chad"))
 
-
+#does the load inventory so loads stuff
 def load_inventory_json(inventory):
     #clears whatever is in invintory, opens a file, decodes the stuff inside the file from strings to array of item objects, then it, then returns the inventory
     inventory.clear()
@@ -25,11 +25,11 @@ def total_charged():
         if i.current_renter  != "":
             total_charged += float(i.price)
     return total_charged
-
+#edit the items already in the inventory
 def edit_item():
     title = input("Enter Title: ")
     for i in inventory:
-        if i.title.lower() == input.lower():
+        if i.title.lower() == title.lower():
             title = input("Enter new Title: ")
             year = input("Enter new year: ")
             price = input("Enter new price: ")
@@ -50,9 +50,9 @@ def edit_item():
 def search_by_name():
     title = input("Enter Title: ")
     for i in inventory:
-        if i.title.lower() == input.lower():
+        if i.title.lower() == title.lower():
             return i
-            print(i.title, i.year, i.price, i.genre, i.shelf_number, i.current_renter, sep="\t")
+           
 
     return None
      
@@ -82,7 +82,10 @@ while True:
     print("choose option")
     print("1. Create/add inventory item")
     print("2. View Inventory")
-    print("3. Exit")
+    print("3. Edit item")
+    print("4. Total charge")
+    print("5.search name")
+    print("6. Exit")
     choice = input(">")
 
     if choice == '6':
@@ -92,12 +95,12 @@ while True:
     elif choice == '1':
         create_new_item()
     elif choice =='4':
-        print(get_total_charged(inventory))
+        print(total_charged())
     elif choice == '5':
-        i=search_by_name
-        if instance (i, Item):
-        print(search_by_name(invenetory))
+        i=search_by_name()
+        if isinstance (i, Item):
+            print(i.title, i.year, i.price, i.genre, i.shelf_number, i.current_renter, sep="\t")
     elif choice == '3':
         edit_item()
-    else
+    else:
         print("Invalid Input")
